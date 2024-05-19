@@ -53,6 +53,7 @@
 
     <main>
       <h2>Bienvenido a MovieMayhem</h2>
+
       <section id="inicio">
         <p>
           ¡La red social donde puedes descubrir, compartir y disfrutar de
@@ -62,9 +63,11 @@
           Explora nuestra amplia colección de contenido, interactúa con otros
           amantes del cine y crea tu propio perfil personalizado.
         </p>
-        <a href="#" class="btn">Ingresa</a>
-        <a href="#" class="btn">Registrate</a>
+        <a type="button" class="btn btn-dark" href="pages/login.html">Ingresa</a>
+        <a type="button" class="btn btn-dark" href="pages/login.html">Registrate</a>
       </section>
+
+      
 
       <br />
       <hr />
@@ -106,13 +109,19 @@
       <section id="explorar">
         <h3>Explora</h3>
         <label for="generos">Busca por genero:</label>
-        <select name="generos" id="generos">
-          <option value="accion">Accion</option>
-          <option value="scifi">Ciencia Ficcion</option>
-          <option value="terror">Terror</option>
-          <option value="comedia">Comedia</option>
-        </select>
 
+        <div class="dropdown-center">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genero
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Accion</a></li>
+            <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
+            <li><a class="dropdown-item" href="#">Terror</a></li>
+            <li><a class="dropdown-item" href="#">Comedia</a></li>
+          </ul>
+        </div>
+        
         <div class="container">
           <div class="card" style="width: 18rem;">
             <img src="assets/placeholder.png" class="card-img-top" alt="...">
@@ -163,17 +172,10 @@
 
       <hr />
 
-      <section id="eventos">
-        <h3>Eventos</h3>
-        <p>Lorem ipsum dolor sit amet</p>
-      </section>
-
-      <hr />
-
       <section id="apps">
         <h3>Descarga la version para celular</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-        <img class="appstore" src="img/appstore.png" alt="" />
+        <img class="appstore" src="assets/appstore.png" alt="" />
       </section>
 
       <hr />
