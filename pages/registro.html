@@ -53,14 +53,32 @@
 
     <div class="login">
       <h1>MovieMayhem</h1>
-      <h3>Ingresa tus credenciales</h3>
+      <h3>Registrese ingresando los siguientes datos</h3>
       <form action="">
+        <label class="label-login" for="name"> Nombre: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ingresa tu nombre"
+          required
+        />
+
+        <label class="label-login" for="email"> Email: </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Ingresa tu email"
+          required
+        />
+
         <label class="label-login" for="first"> Usuario: </label>
         <input
           type="text"
           id="first"
           name="first"
-          placeholder="Ingresa tu usuario"
+          placeholder="Crea tu usuario"
           required
         />
 
@@ -69,17 +87,17 @@
           type="password"
           id="password"
           name="password"
-          placeholder="Ingresa tu contrasena"
+          placeholder="Crea tu contrasena"
           required
         />
 
         <div class="wrap">
-          <button class="button-login" type="submit" onclick="solve()">Ingresa</button>
+          <button class="button-login" type="submit" onclick="solve()">Registrate</button>
         </div>
       </form>
       <p>
-        No estas registrado?
-        <a href="registro.html" style="text-decoration: none"> Crea una cuenta </a>
+        Ya estas registrado?
+        <a href="login.html" style="text-decoration: none"> Logueate </a>
       </p>
       <div class="wrap">
         <a class="button-login" href="../index.html">Volver</a>
