@@ -1,9 +1,22 @@
+/*ROOT*/
+:root{
+    --color-negro: #020202;
+    --color-1: #0d324d;
+    --color-2: #9da2ab;
+}
+
 /*Formateo*/
 *{
-    font-family: 'Roboto';
+    font-family: 'DM Sans';
     padding: 0;
     margin: 0;
+    color: var(--color-2);
     
+}
+
+/*Cambiar el color del background*/
+body{
+    background: linear-gradient(to right, var(--color-negro), var(--color-1));
 }
 
 /*Alinear contenido al centro*/
@@ -13,7 +26,94 @@ header, main, footer {
 
 /*Cambios en el NAV*/
 .navbar {
-    background-color: #020202 !important;
+    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+}
+
+/*Seccion HERO*/
+.hero-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+    color: var(--color-2);
+    text-align: center; 
+}
+
+.hero-section .display-4 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.hero-section .btn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.hero-section .btn-primary {
+    background-color: #0d324d;
+    border-color: #0d324d;
+}
+
+.hero-section .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+.texto-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.texto-vertical h1,
+.texto-vertical p {
+    margin: 10px 0;
+}
+
+.texto-vertical p {
+    font-size: 1.25rem;
+}
+
+/*HERO MEDIA QUERIES*/
+@media (max-width: 576px) {
+    .hero-section .display-4 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+}
+
+/*Cambios en el FOOTER*/
+footer{
+    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+    color: var(--color-1) !important;
+}
+
+footer {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*Cambios en TARJETAS*/
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
 
 /* Cambiar el color de los enlaces */
@@ -23,7 +123,7 @@ header, main, footer {
 
 /* Cambiar el color del enlace cuando el ratón pasa por encima */
 .navbar .nav-link:hover {
-    color: #9da2ab !important;
+    color: var(--color-1) !important;
 }
 
 /* Cambiar la fuente de la navbar */
@@ -33,7 +133,7 @@ header, main, footer {
 
 /* Cambiar el color del texto de la marca */
 .navbar-brand {
-    color: #9da2ab !important;
+    color: var(--color-1) !important;
 }
 
 /*Container donde se ponen las fotos de las peliculas*/
@@ -42,6 +142,18 @@ header, main, footer {
     justify-content: space-around;
     margin-top: 20px;
 }
+
+/*Estilo adicional para los botones del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 3%;
+}
+
+
+
+
+
 
 /*Cambios en las IMAGENES*/
 img {
@@ -103,7 +215,7 @@ input {
     border: none;
     color: white;
     cursor: pointer;
-    background-color: #9DA2AB;
+    background-color: var(--color-2);
     width: 100%;
     font-size: 16px;
 }
@@ -113,22 +225,6 @@ input {
     justify-content: center;
     align-items: center;
 }
-
-
-
-/*Cambios en el FOOTER*/
-footer {
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30%;
-    background-color: #313131;
-    color: white;
-    text-align: center;
- }
-
-
 
 
 /*Botones*/
@@ -147,37 +243,3 @@ footer {
 
 
 /*Calendario (sacado de una template, puesto como placehodler)*/
-.calendar {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.month {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.weekdays {
-    display: flex;
-}
-
-.weekdays div {
-    width: calc(100% / 7);
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px 0;
-    background-color: #f0f0f0;
-}
-
-.days {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.days div {
-    width: calc(100% / 7);
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px 0;
-}
