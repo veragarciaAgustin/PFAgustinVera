@@ -2,7 +2,7 @@
 :root {
     --color-negro: #020202;
     --color-1: #0d324d;
-    --color-2: #9da2ab;
+    --color-2: #fff;
     --color-tarjetas: #7f5a83;
 }
 
@@ -39,11 +39,6 @@ footer {
 
 .navbar .nav-link:hover {
     color: var(--color-1) !important;
-}
-
-.navbar-brand,
-.navbar-nav .nav-link {
-    font-family: 'Arial', sans-serif;
 }
 
 .navbar-brand {
@@ -177,7 +172,7 @@ footer {
 }
 
 .carousel-section .card:hover {
-    transform: scale(1.00);
+    transform: scale(1.0);
 }
 
 .carousel-section .card-title {
@@ -199,31 +194,36 @@ footer {
 }
 
 /*CARD: colores y estilos de las tarjetas en todas las secciones*/
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px; /* Ajusta este valor según sea necesario */
+    object-fit: cover;
+}
+
 .card-body {
     background-color: var(--color-tarjetas);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .card-title {
+    margin: 0;
     color: white !important;
 }
 
 .card-text {
     color: white;
 }
-
-.card {
-    overflow: hidden;
-    background-color: transparent;
-    border: none;
-}
-
-.card-img-top {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-}
-
-
 
 /*Cambios en el FOOTER*/
 footer {
@@ -236,13 +236,6 @@ footer {
     margin-bottom: 0 !important;
     padding-top: 0;
     padding-bottom: 0;
-}
-
-/*Container donde se ponen las fotos de las peliculas*/
-.container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
 }
 
 /*Cambios en las IMAGENES*/
@@ -267,12 +260,13 @@ footer {
 
 /*LOGIN*/
 .login {
-    background-color: #fff;
+    background: linear-gradient(var(--color-negro), 40%, var(--color-1));
+    color: white;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     transition: transform 0.2s;
-    width: 500px;
+    width: 20%;
     text-align: center;
     justify-content: center;
     margin-left: 40%;
@@ -284,7 +278,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: left;
-    color: #555;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -307,9 +301,76 @@ footer {
     border: none;
     color: white;
     cursor: pointer;
-    background-color: var(--color-1);
+    background-color: var(--color-tarjetas);
     width: 100%;
     font-size: 16px;
+}
+
+/*MEDIA QUERIES Login*/
+@media (max-width: 576px) {
+    .login {
+        width: 80%;
+        height: fit-content;
+        font-size: 0.8rem;
+        margin-left: 30%;
+    }
+
+    .login h1{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 60%;
+        font-size: 1rem;
+        margin-left: 30%;
+    }
+
+    .login h1{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .login {
+        width: 50%;
+        font-size: 1rem;
+        margin-left: 30%;
+    }
+
+    .login h1{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .login {
+        width: 40%;
+        font-size: 1rem;
+        margin-left: 30%;
+    }
+
+    .login h1{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .login {
+        width: 40%;
+        font-size: 1rem;
+        margin-left: 30%;
+    }
+
+    .login h1{
+        font-size: 1.2rem;
+    }
+
 }
 
 .wrap {
