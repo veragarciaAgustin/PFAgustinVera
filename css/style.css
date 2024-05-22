@@ -1,40 +1,62 @@
 /*ROOT*/
-:root{
+:root {
     --color-negro: #020202;
     --color-1: #0d324d;
     --color-2: #9da2ab;
+    --color-tarjetas: #7f5a83;
 }
 
 /*Formateo*/
-*{
+* {
     font-family: 'DM Sans';
     padding: 0;
     margin: 0;
     color: var(--color-2);
-    
+    font-weight: 700;
+
 }
 
 /*Cambiar el color del background*/
-body{
-    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+body {
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
 }
 
 /*Alinear contenido al centro*/
-header, main, footer {
+header,
+main,
+footer {
     text-align: center;
 }
 
 /*Cambios en el NAV*/
 .navbar {
-    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
 }
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-1) !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
 
 /*Seccion HERO*/
 .hero-section {
     padding: 60px 0;
-    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
     color: var(--color-2);
-    text-align: center; 
+    text-align: center;
 }
 
 .hero-section .display-4 {
@@ -96,9 +118,116 @@ header, main, footer {
     }
 }
 
+/*Seccion INFO*/
+
+.info-section {
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
+    color: var(--color-2);
+}
+
+.h2 {
+    font-weight: 700;
+}
+
+.info-section .col-md-4 h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.info-section .col-md-4 p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/*Seccion POPULAR*/
+.popular-section h2 {
+    font-weight: 700;
+}
+
+.popular-section .card {
+    transition: transform 0.2s;
+}
+
+.popular-section .card:hover {
+    transform: scale(1.05);
+}
+
+.popular-section .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.popular-section .card-text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/*Seccion carousel*/
+.carousel-section {
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
+    color: var(--color-2);
+}
+
+.carousel-section h2 {
+    font-weight: 700;
+}
+
+.carousel-section .card {
+    transition: transform 0.2s;
+}
+
+.carousel-section .card:hover {
+    transform: scale(1.00);
+}
+
+.carousel-section .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.carousel-section .card-text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #343a40;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+/*CARD: colores y estilos de las tarjetas en todas las secciones*/
+.card-body {
+    background-color: var(--color-tarjetas);
+}
+
+.card-title {
+    color: white !important;
+}
+
+.card-text {
+    color: white;
+}
+
+.card {
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+}
+
+.card-img-top {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+
 /*Cambios en el FOOTER*/
-footer{
-    background: linear-gradient(to right, var(--color-negro), var(--color-1));
+footer {
+    background: linear-gradient(to right, var(--color-negro), 40%, var(--color-1));
     color: var(--color-1) !important;
 }
 
@@ -109,33 +238,6 @@ footer {
     padding-bottom: 0;
 }
 
-/*Cambios en TARJETAS*/
-.card {
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-}
-
-/* Cambiar el color de los enlaces */
-.navbar .nav-link {
-    color: #fff !important;
-}
-
-/* Cambiar el color del enlace cuando el ratón pasa por encima */
-.navbar .nav-link:hover {
-    color: var(--color-1) !important;
-}
-
-/* Cambiar la fuente de la navbar */
-.navbar-brand, .navbar-nav .nav-link {
-    font-family: 'Arial', sans-serif;
-}
-
-/* Cambiar el color del texto de la marca */
-.navbar-brand {
-    color: var(--color-1) !important;
-}
-
 /*Container donde se ponen las fotos de las peliculas*/
 .container {
     display: flex;
@@ -143,34 +245,24 @@ footer {
     margin-top: 20px;
 }
 
-/*Estilo adicional para los botones del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 3%;
-}
-
-
-
-
-
-
 /*Cambios en las IMAGENES*/
-img {
+
+.appstore {
+    width: 20%;
+    margin-left: 40%;
     max-width: 90%;
     height: auto;
     display: block;
     margin-bottom: 10px;
 }
 
-.appstore{
+.avatar {
     width: 20%;
     margin-left: 40%;
-}
-
-.avatar{
-    width: 20%;
-    margin-left: 40%;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 /*LOGIN*/
@@ -197,7 +289,7 @@ img {
 }
 
 
-input {
+.login input {
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -215,7 +307,7 @@ input {
     border: none;
     color: white;
     cursor: pointer;
-    background-color: var(--color-2);
+    background-color: var(--color-1);
     width: 100%;
     font-size: 16px;
 }
@@ -226,20 +318,6 @@ input {
     align-items: center;
 }
 
-
-/*Botones*/
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 .btn:hover {
     background-color: #0056b3;
 }
-
-
-/*Calendario (sacado de una template, puesto como placehodler)*/

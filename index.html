@@ -1,279 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieMayhem</title>
-    <link rel="icon" href="img/icon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- FUENTES GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poetsen+One&display=swap" rel="stylesheet">
-    
-    <!-- BOOTSTRAP -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">MovieMayhem</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="pages/destacadas.html"
-                  >Destacadas</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/explorar.html">Explorar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/eventos.html">Eventos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/perfil.html">Perfil</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero-section text-center" id="inicio">
-        <div class="container">
-          <div class="texto-vertical">
-            <h1 class="display-4">Bienvenido a MovieMayhem</h1>
-            <p class="lead">¡La red social donde puedes descubrir, compartir y disfrutar de películas y series!</p>
-            <p class="lead">Explora nuestra amplia colección de contenido, interactúa con otros amantes del cine y crea tu propio perfil personalizado.</p>
-            <div class="mt-4">
-                <a href="pages/login.html" class="btn btn-primary btn-lg mr-2">Ingresa</a>
-                <a href="pages/registro.html" class="btn btn-outline-light btn-lg">Regístrate</a>
-            </div>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieMayhem</title>
+  <link rel="icon" href="img/icon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- FUENTES GOOGLE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poetsen+One&display=swap"
+    rel="stylesheet">
 
-      <br />
-      <hr />
-      
-      <section id="destacadas">
-        <h3>Destacadas de la semana</h3>
-        <div class="container">
-          <div class="card" style="width: 18rem">
-            <img src="assets/placeholder.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Titulo de la pelicula</h5>
-              <p class="card-text">Una pequena review que se extiende</p>
-              <a href="#" class="btn btn-primary">Ir a la review</a>
-            </div>
-          </div>
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
 
-          <div class="card" style="width: 18rem">
-            <img src="assets/placeholder.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Titulo de la pelicula</h5>
-              <p class="card-text">Una pequena review que se extiende</p>
-              <a href="#" class="btn btn-primary">Ir a la review</a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img src="assets/placeholder.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Titulo de la pelicula</h5>
-              <p class="card-text">Una pequena review que se extiende</p>
-              <a href="#" class="btn btn-primary">Ir a la review</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <section id="explorar">
-        <h3>Explora</h3>
-        <label for="generos">Busca por genero:</label>
-
-        <div class="dropdown-center">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Genero
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Accion</a></li>
-            <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
-            <li><a class="dropdown-item" href="#">Terror</a></li>
-            <li><a class="dropdown-item" href="#">Comedia</a></li>
+<body>
+  <!-- Seccion de navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">MovieMayhem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="pages/destacadas.html">Destacadas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/explorar.html">Explorar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/eventos.html">Eventos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/perfil.html">Perfil</a>
+            </li>
           </ul>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div id="cardCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <div class="row">
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/placeholder.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/placeholder.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/placeholder.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="row">
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/avatar.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/avatar.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-md-4">
-                          <div class="card" style="width: 18rem;">
-                              <img src="assets/avatar.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Titulo de la pelicula</h5>
-                                  <p class="card-text">Una pequena review que se extiende</p>
-                                  <a href="#" class="btn btn-primary">Ir a la review</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+  <main>
+    <!-- Seccion de inicio -->
+    <section class="hero-section text-center" id="inicio">
+      <div class="container">
+        <div class="texto-vertical">
+          <h1 class="display-4">Bienvenido a MovieMayhem</h1>
+          <p class="lead">¡La red social donde puedes descubrir, compartir y disfrutar de películas y series!</p>
+          <p class="lead">Explora nuestra amplia colección de contenido, interactúa con otros amantes del cine y crea tu
+            propio perfil personalizado.</p>
+          <div class="mt-4">
+            <a href="pages/login.html" class="btn btn-primary btn-lg mr-2">Ingresa</a>
+            <a href="pages/registro.html" class="btn btn-outline-light btn-lg">Regístrate</a>
           </div>
-          <a class="carousel-control-prev " href="#cardCarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a class="carousel-control-next" href="#cardCarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion de info -->
+    <section class="info-section text-center py-5">
+      <h2 class="mb-4">¿Qué encontraras en MovieMayhem?</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Publicación de Reviews</h5>
+            <p>Comparte tus opiniones sobre las últimas películas y series con nuestra comunidad. Escribe reviews
+              detalladas y ayuda a otros usuarios a descubrir contenido nuevo.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Interacción Social</h5>
+            <p>Conéctate con otros amantes del cine, comenta en las reviews, califica películas y series, y sigue a tus
+              críticos favoritos. MovieMayhem es más que una simple plataforma de reviews; es una comunidad.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Listas Personalizadas</h5>
+            <p>Crea y guarda listas de tus películas y series favoritas. Organiza tu contenido por género, año, o
+              cualquier otra categoría que prefieras. Nunca más pierdas de vista lo que quieres ver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion de popular -->
+    <section class="popular-section text-center py-5">
+      <h2 class="mb-4">Películas y Series Populares</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="assets/peliculas/interestelar.jpg" class="card-img-top" alt="Popular Movie 1">
+              <div class="card-body">
+                <h5 class="card-title">interestelar</h5>
+                <p class="card-text">Una breve descripción de la película.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Popular Movie 2">
+              <div class="card-body">
+                <h5 class="card-title">The Dark Knight</h5>
+                <p class="card-text">Una breve descripción de la película.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Popular Movie 3">
+              <div class="card-body">
+                <h5 class="card-title">Stranger Things</h5>
+                <p class="card-text">Una breve descripción de la película.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="assets/peliculas/breakingbad.jpg" class="card-img-top" alt="Popular Movie 4">
+              <div class="card-body">
+                <h5 class="card-title">Breaking Bad</h5>
+                <p class="card-text">Una breve descripción de la película.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion de explorar -->
+    <section id="explorar">
+      <h2 class="mb-4 text-center">Explora más Películas y Series</h2>
+      <label for="generos">Busca por genero:</label>
+
+      <div class="dropdown-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Genero
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Accion</a></li>
+          <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
+          <li><a class="dropdown-item" href="#">Terror</a></li>
+          <li><a class="dropdown-item" href="#">Comedia</a></li>
+        </ul>
       </div>
 
-      <hr />
-
+      <section class="carousel-section py-5">
+        <div class="container">
+          <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets//peliculas/breakingbad.jpg" class="card-img-top" alt="Movie 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 1</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets/peliculas/interestelar.jpg" class="card-img-top" alt="Movie 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 2</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Movie 3">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 3</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Movie 4">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 4</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets/movie5.png" class="card-img-top" alt="Movie 5">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 5</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="assets/movie6.png" class="card-img-top" alt="Movie 6">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de la Película 6</h5>
+                        <p class="card-text">Una breve descripción de la película.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev custom-carousel-control" href="#carouselExample" role="button"
+              data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next custom-carousel-control" href="#carouselExample" role="button"
+              data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Seccion de app -->
       <section id="apps">
         <h3>Descarga la version para celular</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
         <img class="appstore" src="assets/appstore.png" alt="" />
       </section>
-
-      <hr />
-
+      <!-- Seccion de contacto -->
       <section id="contacto">
         <h3>Contactanos</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
         <label for="email">Ingresa tu email:</label>
-        
+        <input class="input" type="email" name="Ingresa tu email" id="">
       </section>
-    </main>
+  </main>
+  <!-- Seccion de footer -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0">
+      &copy; 2024 MovieMayhem, Inc
+    </p>
 
-    
+    <a href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 
-    <footer
-      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-    >
-      <p class="col-md-4 mb-0">
-        &copy; 2024 MovieMayhem, Inc
-      </p>
+    </a>
 
-      <a
-        href="/"
-        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-      >
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link px-2">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/explorar.html" class="nav-link px-2">Explorar</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/eventos.html" class="nav-link px-2">Eventos</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/perfil.html" class="nav-link px-2">Perfil</a>
+      </li>
+    </ul>
+  </footer>
 
-      </a>
+  <!-- BOOTSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link px-2"
-            >Inicio</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="pages/explorar.html"
-            class="nav-link px-2"
-            >Explorar</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="pages/eventos.html" class="nav-link px-2"
-            >Eventos</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="pages/perfil.html" class="nav-link px-2"
-            >Perfil</a
-          >
-        </li>
-      </ul>
-    </footer>
-
-    <!-- BOOTSTRAP -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
