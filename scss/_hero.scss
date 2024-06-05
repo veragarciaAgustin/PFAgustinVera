@@ -1,0 +1,68 @@
+@import "variables";
+
+/*Cambios en Hero*/
+.hero-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, $color-negro, 40%, $color-1);
+    color: $color-2;
+    text-align: center;
+  
+    .display-4 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  
+    .btn {
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+  
+    .btn-primary {
+      background-color: $color-1;
+      border-color: $color-1;
+    }
+  
+    .btn-outline-light {
+      border-color: $color-blanco;
+      color: $color-blanco;
+    }
+  
+    .btn-outline-light:hover {
+      background-color: $color-blanco;
+      color: $color-3;
+    }
+  
+    .texto-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    .texto-vertical h1 {
+      margin: 10px 0;
+    }
+  
+    .texto-vertical p {
+      margin: 10px 0;
+      font-size: 1.25rem;
+    }
+  }
+  
+  /*HERO MEDIA QUERIES*/
+  @media (max-width: 576px) {
+    .hero-section .display-4 {
+      font-size: 2rem;
+    }
+  
+    .hero-section .lead {
+      font-size: 1rem;
+    }
+  }

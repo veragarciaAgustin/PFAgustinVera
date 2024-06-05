@@ -1,411 +1,284 @@
-@import 'variables';
+@import "variables";
+@import "perfil";
+@import "navbar";
+@import "postcard";
+@import "calendario";
+
 
 /*GENERALES*/
-*{
-    font-family: 'DM Sans';
-    padding: 0;
-    margin: 0;
-    color: $color-2;
-    font-weight: 700;
-    
+* {
+  font-family: "DM Sans";
+  padding: 0;
+  margin: 0;
+  color: $color-2;
+  font-weight: 700;
+  
 }
 
 /*Cambios en BODY*/
-body{
-    background: linear-gradient(to right, $color-negro, 40%, $color-1);
-
-    header, main, footer{
-        text-align: center;
-    }
-}
-
-/*Cambios en NavBar*/
-.navbar {
-    background: linear-gradient(to right, $color-negro, 40%, $color-1);
-
-    .nav-link {
-        color: $color-blanco;
-    }
-
-    .nav-link:hover {
-        color: $color-3;
-    }
-
-    .navbar-brand {
-        color: $color-blanco;
-    }
-
-    .navbar-brand:hover {
-        color: $color-3;
-    }
-}
-
-/*Cambios en Hero*/
-.hero-section {
-    padding: 60px 0;
-    background: linear-gradient(to right, $color-negro, 40%, $color-1);
-    color: $color-2;
+body {
+  background: linear-gradient(to right, $color-negro, 40%, $color-1);
+  
+  header,
+  main,
+  footer {
     text-align: center;
-
-    .display-4 {
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .lead {
-        font-size: 1.25rem;
-        font-weight: 300;
-    }
-
-    .btn {
-        padding: 10px 30px;
-        font-size: 1.1rem;
-        margin-top: 10px;
-    }
-
-    .btn-primary {
-    background-color: $color-1;
-    border-color: $color-1;
-    }
-
-    .btn-outline-light {
-        border-color: $color-blanco;
-        color: $color-blanco;
-    }
-
-    .btn-outline-light:hover {
-        background-color: $color-blanco;
-        color: $color-3;
-    } 
-
-    .texto-vertical {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
     
-    .texto-vertical h1{
-        margin: 10px 0;
-    }
-    
-    .texto-vertical p {
-        margin: 10px 0;
-        font-size: 1.25rem;
-    }
-}
-
-/*HERO MEDIA QUERIES*/
-@media (max-width: 576px) {
-    .hero-section .display-4 {
-        font-size: 2rem;
-    }
-
-    .hero-section .lead {
-        font-size: 1rem;
-    }
+  }
 }
 
 /*Seccion INFO*/
 
 .info-section {
-    background: linear-gradient(to right,  $color-negro, 40%, $color-1);
-    color: $color-2;
-
-}
-
-.h2 {
+  background: linear-gradient(to right, $color-negro, 40%, $color-1);
+  color: $color-2;
+  .h2 {
     font-weight: 700;
-}
-
-.col-md-4 h5 {
+  }
+  
+  .col-md-4 h5 {
     font-size: 1.3rem;
     font-weight: 600;
-}
-
-.col-md-4 p {
+  }
+  
+  .col-md-4 p {
     font-size: 1rem;
     font-weight: 300;
+  }
 }
+
+
 /*CARD: Colores y estilos de las tarjetas en todas las secciones*/
 
 .card {
-    height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .card-body {
+    background-color: $color-tarjetas;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
 
-    .card-body{
-        background-color: $color-tarjetas;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        flex-grow: 1;
-    }
-    
-    h5{
-        margin: 0;
-        color: $color-blanco !important;
-    }
+  h5 {
+    margin: 0;
+    color: $color-blanco !important;
+  }
 
-    text {
-        color: white;
-    }
+  text {
+    color: white;
+  }
 
-    .card-img-top {
-        width: 100%;
-        height: 60vh;
-        object-fit: cover;
-    }
-
+  .card-img-top {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
 
 /*Seccion POPULAR*/
-.popular-section{
-    h2{
+.popular-section {
+  h3 {
     font-weight: 700;
-    }
+  }
 
-    .card {
-        transition: transform 0.2s;
-        
-    }
+  .card {
+    transition: transform 0.2s;
+  }
 
-    .card-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 
-    .card-text {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-}
-
-/*Seccion carousel*/
-.carousel-section {
-    background: linear-gradient(to right, $color-negro, 40%, $color-1);
-    color: $color-2;
-
-    h2 {
-        font-weight: 700;
-    }
-
-    .card {
-        transition: transform 0.2s;
-    }
-
-    .card:hover {
-        transform: scale(1.0);
-    }
-
-    .card-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-
-    .card-text {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-    background-color: #343a40;
-    border-radius: 50%;
-    padding: 10px;
-    }
-
+  .card-text {
+    font-size: 1rem;
+    font-weight: 300;
+  }
 }
 
 /*Cambios en el FOOTER*/
 footer {
-    background: linear-gradient(to right, $color-negro, 40%, $color-1);
-    color: $color-1 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0;
-    padding-bottom: 0;
+  background: linear-gradient(to right, $color-negro, 40%, $color-1);
+  color: $color-1 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
 
-    a.nav-link{
-        color: white;
-        font: bolder;
-    }
-    
+  a.nav-link {
+    color: white;
+    font: bolder;
+  }
 }
-
 
 /*Cambios en las IMAGENES*/
 
 .appstore {
-    width: 20%;
-    margin-left: 40%;
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+  width: 20%;
+  margin-left: 40%;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .avatar {
-    width: 20%;
-    margin-left: 40%;
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+  width: 20%;
+  margin-left: 40%;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /*LOGIN Y REGISTRO*/
 .login {
-    background: linear-gradient($color-negro, 40%, $color-1);
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
-    transition: transform 0.2s;
-    width: 20%;
-    text-align: center;
-    justify-content: center;
-    margin-left: 40%;
+  background: linear-gradient($color-negro, 40%, $color-1);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  transition: transform 0.2s;
+  width: 20%;
+  text-align: center;
+  justify-content: center;
+  margin-left: 40%;
 
-    input {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: $color-negro;
+  }
 
-    a{
-        color: $color-2;
-    }
+  a {
+    color: $color-2;
+  }
 }
 
 .label-login {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    text-align: left;
-    color: #fff;
-    font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #fff;
+  font-weight: bold;
 }
 
 .button-login {
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: $color-tarjetas;
-    width: 100%;
-    font-size: 16px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: $color-tarjetas;
+  width: 100%;
+  font-size: 16px;
 }
 
-/*MEDIA QUERIES Login*/
-
-@media (max-width:500px) {
-    .login {
-
-        h3{
-            font-size: 2.5vh;
-        }
-
-        input#first{
-            font-size: 1.3vh;
-        }
-
-        input#password{
-            font-size: 1.3vh;
-        }
-        
-    }
-
-}
-
-
-@media (max-width: 576px) {
-    .login {
-        width: 80%;
-        height: fit-content;
-        font-size: 0.8rem;
-        margin-left: 30%;
-    }
-
-    .login h1{
-        font-size: 0.8rem;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .login {
-        width: 60%;
-        font-size: 1rem;
-        margin-left: 30%;
-    }
-
-    .login h1{
-        font-size: 1.2rem;
-    }
-
-}
-
-@media (max-width: 992px) {
-    .login {
-        width: 50%;
-        font-size: 1rem;
-        margin-left: 30%;
-    }
-
-    .login h1{
-        font-size: 1.2rem;
-    }
-
-}
-
-@media (max-width: 1200px) {
-    .login {
-        width: 40%;
-        font-size: 1rem;
-        margin-left: 30%;
-    }
-
-    .login h1{
-        font-size: 1.2rem;
-    }
-
-}
-
-@media (min-width: 1201px) {
-    .login {
-        width: 40%;
-        font-size: 1rem;
-        margin-left: 30%;
-    }
-
-    .login h1{
-        font-size: 1.2rem;
-    }
-
-}
+/*MEDIA QUERIES Login y Calendario*/
 
 .wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
+
+
+
+@media (max-width: 500px) {
+    .login {
+      h3 {
+        font-size: 2.5vh;
+      }
+  
+      input#first {
+        font-size: 1.3vh;
+      }
+  
+      input#password {
+        font-size: 1.3vh;
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .login {
+      width: 80%;
+      height: fit-content;
+      font-size: 0.8rem;
+      margin-left: 30%;
+    }
+  
+    .login h1 {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login {
+      width: 60%;
+      font-size: 1rem;
+      margin-left: 30%;
+    }
+  
+    .login h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .login {
+      width: 50%;
+      font-size: 1rem;
+      margin-left: 30%;
+    }
+  
+    .login h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .login {
+      width: 40%;
+      font-size: 1rem;
+      margin-left: 30%;
+    }
+  
+    .login h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    .login {
+      width: 40%;
+      font-size: 1rem;
+      margin-left: 30%;
+    }
+  
+    .login h1 {
+      font-size: 1.2rem;
+    }
+  }
 

@@ -5,7 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MovieMayhem - Destacados</title>
-  <link rel="icon" href="img/icon.ico" />
+  <link rel="icon" href="../assets/logo.png" />
+  <!-- METADATOS -->
+  <meta name="description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
+  <meta name="keywords" content="Peliculas,Cine,Hollywood,">
+  <!-- Etiquetas Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MovieMayhem - El mundo de las peliculas">
+  <meta property="og:description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="www.moviemayhem.com">
   <link rel="stylesheet" href="../css/style.css" />
   <!-- FUENTES GOOGLE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +32,13 @@
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">MovieMayhem</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="destacadas.html">Destacadas</a>
+              <a class="nav-link" aria-current="page" href="destacadas.html">Destacadas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="explorar.html">Explorar</a>
@@ -38,17 +46,26 @@
             <li class="nav-item">
               <a class="nav-link" href="eventos.html">Eventos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="perfil.html">Perfil</a>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Perfil
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="login.html">Ingresar</a></li>
+                <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+
   <main>
-    <section id="destacadas">
-      <h3>Destacadas</h3>
+      <h1>Destacadas</h1>
       <div class="desplegables">
         <label for="fecha">Cambia el periodo a destacar:</label>
       <div class="dropdown-center">
@@ -62,123 +79,144 @@
           <li><a class="dropdown-item" href="#">Año</a></li>
         </ul>
       </div>
-
-      </div>
-      <div class="container">
-        <div class="row col-lg-12">
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/interestelar.jpg" class="card-img-top" alt="Popular Movie 1">
-              <div class="card-body">
-                <h5 class="card-title">Interestelar</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/shutterisland.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Shutter Island</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Popular Movie 4">
-              <div class="card-body">
-                <h5 class="card-title">The Dark Knight</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/breakingbad.jpg" class="card-img-top" alt="Popular Movie 4">
-              <div class="card-body">
-                <h5 class="card-title">Breaking Bad</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/gameofthrones.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Game of Thrones</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Stranger Things</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/exmachina.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Ex-Machina</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/midsommar.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Midsommar</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/thelighthouse.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">The Lighthouse</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/attack.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Attack on Titan</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/theboys.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">The Boys</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="../assets/peliculas/invencible.jpg" class="card-img-top" alt="Popular Movie 2">
-              <div class="card-body">
-                <h5 class="card-title">Invencible</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-  <hr />
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/exmachina.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/thedarkknight.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/midsommar.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/breakingbad.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/invencible.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="postcard">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="../assets/peliculas/theboys.jpg" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top">
     <p class="col-md-4 mb-0">

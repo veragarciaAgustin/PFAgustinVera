@@ -1,0 +1,34 @@
+@import "variables";
+
+/*Cambios en NavBar*/
+.navbar {
+    background: linear-gradient(to right, $color-negro, 40%, $color-1);
+    height: 8rem;
+
+    .nav-link {
+      color: $color-blanco;
+      font-size: 1.3rem;
+
+    }
+  
+    .nav-link:hover {
+      color: $color-3;
+    }
+  
+    .navbar-brand {
+      color: $color-blanco;
+      font-size: 1.5rem;
+    }
+  
+    .navbar-brand:hover {
+      color: $color-3;
+    }
+  }
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+  
+}

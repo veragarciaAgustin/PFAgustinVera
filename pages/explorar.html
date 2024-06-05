@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieMayhem - Explorar</title>
-    <link rel="icon" href="img/icon.ico" />
+    <link rel="icon" href="../assets/logo.png" />
+  <!-- METADATOS -->
+  <meta name="description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
+  <meta name="keywords" content="Peliculas,Cine,Hollywood,">
+  <!-- Etiquetas Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MovieMayhem - El mundo de las peliculas">
+  <meta property="og:description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="www.moviemayhem.com">
     <link rel="stylesheet" href="../css/style.css" />
     <!-- FUENTES GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +31,14 @@
     <header>
       <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"
-          >MovieMayhem</a>
+          <a class="navbar-brand" href="../index.html">MovieMayhem</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="destacadas.html">Destacadas</a>
+                <a class="nav-link" aria-current="page" href="destacadas.html">Destacadas</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="explorar.html">Explorar</a>
@@ -38,8 +46,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="eventos.html">Eventos</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="perfil.html">Perfil</a>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Perfil
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+                  <li><a class="dropdown-item" href="login.html">Ingresar</a></li>
+                  <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -48,55 +65,136 @@
     </header>
     <main>
       <section id="explorar">
-        <h3>Explora</h3>
+        <h1>Explora</h1>
         <label for="generos">Busca por genero:</label>
-        <select name="generos" id="generos">
-          <option value="accion">Accion</option>
-          <option value="scifi">Ciencia Ficcion</option>
-          <option value="terror">Terror</option>
-          <option value="comedia">Comedia</option>
-        </select>
+        <div class="dropdown-center">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genero
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Terror</a></li>
+            <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
+            <li><a class="dropdown-item" href="#">Comedia</a></li>
+            <li><a class="dropdown-item" href="#">Accion</a></li>
+          </ul>
+          <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+          
+        </div>
 
         <div class="container">
-          <figure>
-            <img src="img/placeholder.png" alt="Imagen 1" />
-            <figcaption>
-              <h2>Título de la Pelicula 1</h2>
-              <p>Descripción de la Pelicula 1</p>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/placeholder.png" alt="Imagen 2" />
-            <figcaption>
-              <h2>Título de la Pelicula 2</h2>
-              <p>Descripción de la Pelicula 2.</p>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/placeholder.png" alt="Imagen 3" />
-            <figcaption>
-              <h2>Título de la Pelicula 3</h2>
-              <p>Descripción de la Pelicula 3.</p>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/placeholder.png" alt="Imagen 4" />
-            <figcaption>
-              <h2>Título de la Pelicula 4</h2>
-              <p>Descripción de la Pelicula 4.</p>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/placeholder.png" alt="Imagen 5" />
-            <figcaption>
-              <h2>Título de la Pelicula 5</h2>
-              <p>Descripción de la Pelicula 5.</p>
-            </figcaption>
-          </figure>
+          <div class="row col-lg-12">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/interestelar.jpg" class="card-img-top" alt="Popular Movie 1">
+                <div class="card-body">
+                  <h5 class="card-title">Interestelar</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/shutterisland.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Shutter Island</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Popular Movie 4">
+                <div class="card-body">
+                  <h5 class="card-title">The Dark Knight</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/breakingbad.jpg" class="card-img-top" alt="Popular Movie 4">
+                <div class="card-body">
+                  <h5 class="card-title">Breaking Bad</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/gameofthrones.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Game of Thrones</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Stranger Things</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/exmachina.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Ex-Machina</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/midsommar.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Midsommar</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/thelighthouse.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">The Lighthouse</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/attack.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Attack on Titan</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/theboys.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">The Boys</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="../assets/peliculas/invencible.jpg" class="card-img-top" alt="Popular Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title">Invencible</h5>
+                  <p class="card-text">Una breve descripción de la película.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
