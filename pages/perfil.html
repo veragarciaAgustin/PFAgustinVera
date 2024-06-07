@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MovieMayhem - Perfil</title>
-  <link rel="icon" href="assets/logo.png" />
+  <link rel="icon" href="../assets/logo.png" />
   <!-- METADATOS -->
   <meta name="description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
   <meta name="keywords" content="Peliculas,Cine,Hollywood,">
@@ -26,19 +26,24 @@
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">MovieMayhem</a>
+        <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="" class="img-brand"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="destacadas.html">Destacadas</a>
             </li>
@@ -66,12 +71,12 @@
       </div>
     </nav>
   </header>
-
+  <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
   <main class="perfilMain">
     <h1>Perfil</h1>
     <div class="card-container">
-      <img class="round" src="../assets/avatar.png" alt="user" height="200px" width="200px" />
+      <img class="round" src="../assets/icon.ico" alt="user" height="200px" width="200px" />
       <h3 class="perfilNombre">Agustin Vera</h3>
       <h6>Maldonado, Uruguay</h6>
       <p>Mi pelicula favorita es <strong>Interestelar</strong> y mi serie favorita es <strong>Breaking Bad</strong></p>
@@ -96,32 +101,67 @@
     </div>
   </main>
 
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0">
-      &copy; 2024 MovieMayhem, Inc
-    </p>
+  <!-- Footer -->
+  <footer class="">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="../index.html" class="text-white">Inicio</a>
+            </h5>
+          </div>
 
-    <a href="/"
-      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="destacadas.html" class="text-white">Destacadas</a>
+            </h5>
+          </div>
 
-    </a>
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="explorar.html" class="text-white">Explorar</a>
+            </h5>
+          </div>
 
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item">
-        <a href="../index.html" class="nav-link px-2">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a href="explorar.html" class="nav-link px-2">Explorar</a>
-      </li>
-      <li class="nav-item">
-        <a href="eventos.html" class="nav-link px-2">Eventos</a>
-      </li>
-      <li class="nav-item">
-        <a href="perfil.html" class="nav-link px-2">Perfil</a>
-      </li>
-    </ul>
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="eventos.html" class="text-white">Eventos</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="perfil.html" class="text-white">Mi perfil</a>
+            </h5>
+          </div>
+        </div>
+      </section>
+      <hr class="my-4" />
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Conéctate con otros amantes del cine, comenta en las reviews, califica películas y series, y enterate de
+              los eventos cinematograficos que estan por llegar.
+              <br> MovieMayhem es más que una simple plataforma de reviews; es una comunidad.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Seccion de app movil-->
+      <section id="apps">
+        <h5>Descarga la version para celular</h5>
+        <img class="appstore" src="../assets/appstore.png" alt="Appstore Image" />
+      </section>
+    </div>
+    <div style="border: 1px solid white">
+      © 2024 Copyright MovieMayhem
+    </div>
   </footer>
 
+
+  <script src="../js/script.js"></script>
   <!-- BOOTSTRAP -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

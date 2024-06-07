@@ -1,7 +1,12 @@
 @import "variables";
 
 /*Cambios en NavBar*/
-.navbar {
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+  .navbar {
     background: linear-gradient(to right, $color-negro, 40%, $color-1);
     height: 8rem;
 
@@ -23,12 +28,15 @@
     .navbar-brand:hover {
       color: $color-3;
     }
-  }
 
-header{
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  
-  
+    
+  } 
+}
+
+/*MediaQuery para que el fondo no se vea transparente al ser collapse*/
+@media (max-width: 991px){
+  .navbar-collapse {
+    background: linear-gradient(to right, $color-negro, 40%, $color-1);
+    z-index: 2;
+  }
 }

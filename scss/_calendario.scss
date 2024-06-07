@@ -2,102 +2,99 @@
 
 /*SECCION CALENDARIO eventos.html*/
 
+@mixin tarjeta-style($padding, $font-size, $time-font-size) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: $padding;
+  font-weight: 300;
+  font-size: $font-size;
+  box-sizing: border-box;
+  background: $color-tarjetas;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+
+  time {
+    font-size: $time-font-size;
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+  }
+}
+
 .calendario {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    font-family: "DM Sans";
-  
-    .tituloCalendario {
-      font-weight: 800;
-      margin: 1rem 0 0;
-      color: $color-blanco;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: "DM Sans";
+
+  .tituloCalendario {
+    font-weight: 800;
+    margin: 1rem 0 0;
+    color: $color-blanco;
+  }
+
+  .listaCalendario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    .itemListaCalendario {
+      @include tarjeta-style(1rem, 0.8rem, 1.3rem);
     }
-  
-    .listaCalendario {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-  
-      .itemListaCalendario {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1rem;
-        font-weight: 300;
-        font-size: 0.8rem;
-        box-sizing: border-box;
-        background: $color-tarjetas;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        text-align: center;
-  
-        time {
-          font-size: 1.3rem;
-          margin: 0 0 1rem 0;
-          font-weight: 400;
-        }
-      }
-  
-      .itemListaCalendario:hover {
-        transform: scale(1.05);
-      }
-  
-      .today {
-        time {
-          font-weight: 500;
-          font-size: 2.0rem;
-        }
-        background: $color-3;
+
+    .itemListaCalendario:hover {
+      transform: scale(1.05);
+    }
+
+    .today {
+      @extend .itemListaCalendario;
+      background: $color-3;
+
+      time {
+        font-weight: 500;
+        font-size: 2.0rem;
       }
     }
+  }
 }
 
 /*Media Queries Calendario*/
 @media (max-width: 1200px) {
-    .listaCalendario {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .listaCalendario {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  @media (max-width: 992px) {
-    .listaCalendario {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+}
+
+@media (max-width: 992px) {
+  .listaCalendario {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  
-  @media (max-width: 768px) {
-    .listaCalendario {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .itemListaCalendario {
-      font-size: 0.7rem;
-  
-      time {
-        font-size: 1.8rem;
-      }
-    }
+}
+
+@media (max-width: 768px) {
+  .listaCalendario {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  @media (max-width: 576px) {
-    .listaCalendario {
-      grid-template-columns: 1fr;
-    }
-  
-    .itemListaCalendario {
-      padding: 0.75rem;
-      font-size: 0.8rem;
-  
-      time {
-        font-size: 2rem;
-      }
-    }
+
+  .itemListaCalendario {
+    @include tarjeta-style(1rem, 0.7rem, 1.8rem);
   }
+}
+
+@media (max-width: 576px) {
+  .listaCalendario {
+    grid-template-columns: 1fr;
+  }
+
+  .itemListaCalendario {
+    @include tarjeta-style(0.75rem, 0.8rem, 2rem);
+  }
+}

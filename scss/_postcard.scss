@@ -1,10 +1,12 @@
 @import "variables";
 
+
 a, a:hover {
 	text-decoration: none;
-	transition: color 0.3s ease-in-out;
-    color: inherit;
+	transition: 0.3s ease-in-out;
+  color: $color-2;
 }
+
 
 /* Cards */
 .postcard {
@@ -21,8 +23,7 @@ a, a:hover {
   margin-left: 10%;
   
 
-	
-	h1,	.h1 {
+	h1{
 		margin-bottom: 0.5rem;
 		font-weight: 500;
 		line-height: 1.2;
@@ -52,7 +53,7 @@ a, a:hover {
     height: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: $color-3;
+    background-color: $color-1;
     transition: width 0.2s ease;
   }
 
@@ -122,7 +123,7 @@ a, a:hover {
       content: "";
       position: absolute;
       display: block;
-      background: #18151f;
+      background: $color-negro;
       top: -20%;
       height: 130%;
       width: 55px;
@@ -166,10 +167,5 @@ a, a:hover {
       width: 55px;
     }
 	
-  .postcard.dark {
-		.postcard__text:before {
-			background: #18151f;
-		}
-  }
 }
 

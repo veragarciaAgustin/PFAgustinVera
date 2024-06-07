@@ -28,6 +28,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -35,7 +37,7 @@
   <header>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">MovieMayhem</a>
+        <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="" class="img-brand"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,6 +69,8 @@
       </div>
     </nav>
   </header>
+
+  <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
   <main>
 
@@ -119,39 +123,43 @@
       <h5>Encuentra las peliculas destacadas en nota o popularidad medido por dia, semana, mes o año</h5>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/interestelar.jpg" class="card-img-top" alt="Popular Movie 1">
+              <img src="assets/peliculas/exmachina.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 1">
               <div class="card-body">
-                <h5 class="card-title">Interestelar</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
+                <h5 class="card-title">Ex-Maquina</h5>
+                <p class="card-text">Ciencia Ficcion</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Popular Movie 2">
+              <img src="assets/peliculas/thedarkknight.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 2">
               <div class="card-body">
                 <h5 class="card-title">The Dark Knight</h5>
-                <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-text">Ciencia Ficcion</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Popular Movie 3">
+              <img src="assets/peliculas/midsommar.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 3">
               <div class="card-body">
-                <h5 class="card-title">Stranger Things</h5>
+                <h5 class="card-title">Midsommar</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/breakingbad.jpg" class="card-img-top" alt="Popular Movie 4">
+              <img src="assets/peliculas/breakingbad.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 4">
               <div class="card-body">
                 <h5 class="card-title">Breaking Bad</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
@@ -166,39 +174,43 @@
       <h5>Descubre nuevas peliculas y series, basando tu busqueda en tus directores, actores o generos favoritos</h5>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/interestelar.jpg" class="card-img-top" alt="Popular Movie 1">
+              <img src="assets/peliculas/interestelar.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 1">
               <div class="card-body">
-                <h5 class="card-title">Interestelar</h5>
+                <h5 class="card-title">Shutter Island</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/thedarkknight.jpg" class="card-img-top" alt="Popular Movie 2">
+              <img src="assets/peliculas/thelighthouse.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 2">
               <div class="card-body">
-                <h5 class="card-title">The Dark Knight</h5>
+                <h5 class="card-title">The Lighthouse</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/strangerthings.jpg" class="card-img-top" alt="Popular Movie 3">
+              <img src="assets/peliculas/invencible.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 3">
               <div class="card-body">
                 <h5 class="card-title">Stranger Things</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="assets/peliculas/breakingbad.jpg" class="card-img-top" alt="Popular Movie 4">
+              <img src="assets/peliculas/theboys.jpg" class="card-img-top img-thumbnail" alt="Popular Movie 4">
               <div class="card-body">
-                <h5 class="card-title">Breaking Bad</h5>
+                <h5 class="card-title">Attack on Titan</h5>
                 <p class="card-text">Una breve descripción de la película.</p>
+                <p class="card-link">Ver mas</p>
               </div>
             </div>
           </div>
@@ -206,41 +218,67 @@
       </div>
       <a href="pages/explorar.html" class="btn btn-primary btn-lg mr-2">Ir a explorar</a>
     </section>
+      
+  </main>
 
+  <!-- Footer -->
+  <footer class="">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="#" class="text-white">Inicio</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="pages/destacadas.html" class="text-white">Destacadas</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="pages/explorar.html" class="text-white">Explorar</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="pages/eventos.html" class="text-white">Eventos</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="pages/perfil.html" class="text-white">Mi perfil</a>
+            </h5>
+          </div>
+        </div>
+      </section>
+      <hr class="my-4" />
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Conéctate con otros amantes del cine, comenta en las reviews, califica películas y series, y enterate de los eventos cinematograficos que estan por llegar. 
+              <br> MovieMayhem es más que una simple plataforma de reviews; es una comunidad.
+            </p>
+          </div>
+        </div>
+      </section>
       <!-- Seccion de app movil-->
       <section id="apps">
         <h5>Descarga la version para celular</h5>
         <img class="appstore" src="assets/appstore.png" alt="Appstore Image" />
       </section>
-      
-  </main>
-
-  <!-- Seccion de footer -->
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4">
-    <p class="col-md-4 mb-0">
-      &copy; 2024 MovieMayhem, Inc
-    </p>
-
-    <a href="/"
-      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-
-      
-      <li class="nav-item">
-        <a href="index.html" class="nav-link px-2">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/explorar.html" class="nav-link px-2">Explorar</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/eventos.html" class="nav-link px-2">Eventos</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/perfil.html" class="nav-link px-2">Perfil</a>
-      </li>
-    </ul>
+    </div>
+    <div
+         style="border: 1px solid white"
+         >
+      © 2024 Copyright MovieMayhem
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

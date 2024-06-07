@@ -12,7 +12,8 @@
   <!-- Etiquetas Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="MovieMayhem - El mundo de las peliculas">
-  <meta property="og:description" content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
+  <meta property="og:description"
+    content="Tu pagina web para informarte sobre el mundo del cine y tus peliculas favoritas">
   <meta property="og:image" content="">
   <meta property="og:url" content="www.moviemayhem.com">
   <link rel="stylesheet" href="../css/style.css" />
@@ -25,18 +26,24 @@
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">MovieMayhem</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="" class="img-brand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="destacadas.html">Destacadas</a>
             </li>
@@ -49,7 +56,8 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Perfil
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -63,11 +71,12 @@
       </div>
     </nav>
   </header>
-
+  <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
   <main>
-      <h1>Destacadas</h1>
-      <div class="desplegables">
-        <label for="fecha">Cambia el periodo a destacar:</label>
+    <h1>Destacadas</h1>
+    <h4>Peliculas y series que han destacado ya sea por su nota combinada por parte de la critica y el publico, asi como por su actuacion en taquilla.</h4>
+    <div class="desplegables">
+      <label for="fecha"></label>
       <div class="dropdown-center">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Fecha
@@ -79,171 +88,199 @@
           <li><a class="dropdown-item" href="#">Año</a></li>
         </ul>
       </div>
+
   </main>
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/exmachina.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-    
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/thedarkknight.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/midsommar.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/breakingbad.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/invencible.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="postcard">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="../assets/peliculas/theboys.jpg" alt="Image Title" />
-        </a>
-        <div class="postcard__text">
-          <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2020-05-25 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-            <li class="tag__item play blue">
-              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top">
-    <p class="col-md-4 mb-0">
-      &copy; 2024 MovieMayhem, Inc
-    </p>
-
-    <a href="/"
-      class="col-md-4 d-flex align-items-center justify-content-center mb-4 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-
+  <article class="postcard">
+    <a class="postcard__img_link" href="#">
+      <img class="postcard__img" src="../assets/peliculas/exmachina.jpg" alt="Image Title" />
     </a>
+    <div class="postcard__text">
+      <h1 class="postcard__title"><a href="#">Ex-Maquina</a></h1>
+      <div class="postcard__subtitle small">
+        <i class="">Estreno: 21 de enero de 2015</i>
+        <br>
+        <i class="">Director: Alex Garland</i>
+        <br>
+        <i class="">Principal: Alicia Vikander, Oscar Isaac, Domhnall Gleeson</i>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">"Ex Machina" es una película de ciencia ficción dirigida por Alex Garland. La
+        trama sigue a Caleb, un joven programador que trabaja en una gran empresa
+        de tecnología. Caleb gana un concurso para pasar una semana en la
+        remota residencia de Nathan, el recluso CEO de la compañía. Al llegar, Caleb descubre que ha sido seleccionado
+        para participar en un experimento singular: evaluar las capacidades y consciencia de una avanzada inteligencia
+        artificial llamada Ava, que tiene el cuerpo de un robot femenino.
+        A medida que Caleb interactúa con Ava, se desarrollan tensiones y se revelan secretos, cuestionando las líneas
+        entre humanidad y tecnología, y las verdaderas intenciones de Nathan.</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item"><i class=""></i>Suspenso/Ciencia ficcion</li>
+        <li class="tag__item"><i class=""></i>1h 50min</li>
+        <li class="tag__item">
+          <a href="#"><i class=""></i>Disponible en:  <img src="../assets/netflix.svg" height="20px" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </article>
 
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item">
-        <a href="../index.html" class="nav-link px-2">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a href="explorar.html" class="nav-link px-2">Explorar</a>
-      </li>
-      <li class="nav-item">
-        <a href="eventos.html" class="nav-link px-2">Eventos</a>
-      </li>
-      <li class="nav-item">
-        <a href="perfil.html" class="nav-link px-2">Perfil</a>
-      </li>
-    </ul>
+  <article class="postcard">
+    <a class="postcard__img_link" href="#">
+      <img class="postcard__img" src="../assets/peliculas/thedarkknight.jpg" alt="Image Title" />
+    </a>
+    <div class="postcard__text">
+      <h1 class="postcard__title"><a href="#">The Dark Knight</a></h1>
+      <div class="postcard__subtitle small">
+        <i class="">Estreno: 18 de julio de 2008</i>
+        <br>
+        <i class="">Director: Christopher Nolan</i>
+        <br>
+        <i class="">Principal: Christian Bale, Heath Ledger, Gary Oldman</i>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">"The Dark Knight" es una película de superhéroes dirigida por Christopher
+        Nolan, basada en el personaje de DC Comics, Batman. La historia sigue a Bruce Wayne/Batman (interpretado por
+        Christian Bale) mientras enfrenta su mayor desafío: el anárquico y despiadado Joker (interpretado por Heath
+        Ledger). El Joker siembra el caos en Gotham City, poniendo a prueba los límites morales de Batman y empujándolo
+        a cuestionar sus métodos y su misión. Mientras tanto, el fiscal de distrito Harvey Dent (Aaron Eckhart) emerge
+        como un nuevo símbolo de esperanza para la ciudad, pero su destino se entrelaza trágicamente con el caos del
+        Joker. La película explora temas de justicia, anarquía y dualidad, y es ampliamente elogiada por sus
+        actuaciones, especialmente la del fallecido Heath Ledger, cuyo retrato del Joker se ha convertido en icónico.
+      </div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item"><i class=""></i>Accion/Crimen</li>
+        <li class="tag__item"><i class=""></i>2h 32min</li>
+        <li class="tag__item">
+          <a href="#"><i class=""></i>Disponible en:  <img src="../assets/appletv.svg" height="20px" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="postcard">
+    <a class="postcard__img_link" href="#">
+      <img class="postcard__img" src="../assets/peliculas/midsommar.jpg" alt="Image Title" />
+    </a>
+    <div class="postcard__text">
+      <h1 class="postcard__title"><a href="#">Midsommar</a></h1>
+      <div class="postcard__subtitle small">
+        <i class="">Estreno: 3 de julio de 2019</i>
+        <br>
+        <i class="">Director: Ari Aster</i>
+        <br>
+        <i class="">Principal: Florence Pugh, Will Poulter</i>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">"Midsommar" es una película de terror psicológico dirigida por Ari Aster. La
+        historia sigue a Dani (Florence Pugh), una joven que atraviesa una profunda crisis emocional tras una tragedia
+        familiar. Buscando escapar y encontrar consuelo, acompaña a su novio Christian (Jack Reynor) y a sus amigos en
+        un viaje a Suecia para asistir a un festival de verano en una remota comunidad rural. Al principio, el festival
+        parece ser una celebración idílica, llena de tradiciones y rituales fascinantes. Sin embargo, a medida que pasan
+        los días, los visitantes descubren que la comunidad tiene prácticas inquietantes y perturbadoras. El festival de
+        verano se convierte en una experiencia aterradora y opresiva, desenterrando traumas personales y enfrentándolos
+        a horrores inimaginables. La película es conocida por su atmósfera inquietante, su visualización luminosa y su
+        exploración de temas como el duelo, la dependencia emocional y el choque cultural.</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item"><i class=""></i>Terror/Misterio</li>
+        <li class="tag__item"><i class=""></i>2h 51min</li>
+        <li class="tag__item">
+          <a href="#"><i class=""></i>Disponible en:  <img src="../assets/hbomax.svg" height="20px" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="postcard">
+    <a class="postcard__img_link" href="#">
+      <img class="postcard__img" src="../assets/peliculas/breakingbad.jpg" alt="Image Title" />
+    </a>
+    <div class="postcard__text">
+      <h1 class="postcard__title"><a href="#">Breaking Bad</a></h1>
+      <div class="postcard__subtitle small">
+        <i class="">Estreno: 20 de enero de 2008</i>
+        <br>
+        <i class="">Director: Vince Gilligan</i>
+        <br>
+        <i class="">Principal: Bryan Cranston, Aaron Paul, Anna Gun, Dean Norris</i>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">"Breaking Bad" es una serie de televisión creada por Vince Gilligan. La trama
+        sigue a Walter White (Bryan Cranston), un profesor de química de secundaria en Albuquerque, Nuevo México, que se
+        enfrenta a un diagnóstico de cáncer de pulmón terminal. Desesperado por asegurar el futuro financiero de su
+        familia, Walter decide utilizar sus conocimientos de química para cocinar y vender metanfetaminas. Se asocia con
+        un antiguo alumno, Jesse Pinkman (Aaron Paul), y juntos se adentran en el peligroso mundo del narcotráfico. A
+        medida que Walter se transforma de un hombre común a un despiadado capo de la droga, se enfrenta a amenazas de
+        la ley, rivales criminales y las crecientes tensiones dentro de su propia familia. La serie es conocida por su
+        desarrollo de personajes, complejas tramas y exploración de la moralidad, el poder y la corrupción.</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item"><i class=""></i>Drama</li>
+        <li class="tag__item"><i class=""></i>5 temporadas</li>
+        <li class="tag__item">
+          <a href="#"><i class=""></i>Disponible en:  <img src="../assets/amazonprime.svg" height="20px" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="../index.html" class="text-white">Inicio</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="destacadas.html" class="text-white">Destacadas</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="explorar.html" class="text-white">Explorar</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="eventos.html" class="text-white">Eventos</a>
+            </h5>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="font-weight-bold">
+              <a href="perfil.html" class="text-white">Mi perfil</a>
+            </h5>
+          </div>
+        </div>
+      </section>
+      <hr class="my-4" />
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Conéctate con otros amantes del cine, comenta en las reviews, califica películas y series, y enterate de
+              los eventos cinematograficos que estan por llegar.
+              <br> MovieMayhem es más que una simple plataforma de reviews; es una comunidad.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Seccion de app movil-->
+      <section id="apps">
+        <h5>Descarga la version para celular</h5>
+        <img class="appstore" src="../assets/appstore.png" alt="Appstore Image" />
+      </section>
+    </div>
+    <div style="border: 1px solid white">
+      © 2024 Copyright MovieMayhem
+    </div>
   </footer>
 
+
+  <script src="../js/script.js"></script>
   <!-- BOOTSTRAP -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

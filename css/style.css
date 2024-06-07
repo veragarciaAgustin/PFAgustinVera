@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .perfilMain {
   font-family: "DM Sans";
   box-sizing: border-box;
@@ -52,6 +53,16 @@ p {
   color: #ffffff;
 }
 
+@media (max-width: 875px) {
+  .card-container {
+    width: 60%;
+  }
+}
+@media (max-width: 450px) {
+  .card-container {
+    width: 75%;
+  }
+}
 .generos {
   background-color: #1F1A36;
   text-align: left;
@@ -73,35 +84,41 @@ p {
 }
 
 /*Cambios en NavBar*/
-.navbar {
-  background: linear-gradient(to right, #020202, 40%, #0d324d);
-  height: 8rem;
-}
-.navbar .nav-link {
-  color: #fff;
-  font-size: 1.3rem;
-}
-.navbar .nav-link:hover {
-  color: #007bff;
-}
-.navbar .navbar-brand {
-  color: #fff;
-  font-size: 1.5rem;
-}
-.navbar .navbar-brand:hover {
-  color: #007bff;
-}
-
 header {
   position: sticky;
   top: 0;
   z-index: 1;
 }
+header .navbar {
+  background: linear-gradient(to right, #020202, 40%, #0d324d);
+  height: 8rem;
+}
+header .navbar .nav-link {
+  color: #fff;
+  font-size: 1.3rem;
+}
+header .navbar .nav-link:hover {
+  color: #007bff;
+}
+header .navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+}
+header .navbar .navbar-brand:hover {
+  color: #007bff;
+}
 
+/*MediaQuery para que el fondo no se vea transparente al ser collapse*/
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: linear-gradient(to right, #020202, 40%, #0d324d);
+    z-index: 2;
+  }
+}
 a, a:hover {
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  color: inherit;
+  transition: 0.3s ease-in-out;
+  color: #fff;
 }
 
 /* Cards */
@@ -118,7 +135,7 @@ a, a:hover {
   width: 80%;
   margin-left: 10%;
 }
-.postcard h1, .postcard .h1 {
+.postcard h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -143,7 +160,7 @@ a, a:hover {
   height: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #0d324d;
   transition: width 0.2s ease;
 }
 .postcard .postcard__text {
@@ -203,7 +220,7 @@ a, a:hover {
     content: "";
     position: absolute;
     display: block;
-    background: #18151f;
+    background: #020202;
     top: -20%;
     height: 130%;
     width: 55px;
@@ -238,9 +255,6 @@ a, a:hover {
     height: 130%;
     width: 55px;
   }
-  .postcard.dark .postcard__text:before {
-    background: #18151f;
-  }
 }
 /*SECCION CALENDARIO eventos.html*/
 .calendario {
@@ -261,7 +275,7 @@ a, a:hover {
   list-style: none;
   padding: 0;
 }
-.calendario .listaCalendario .itemListaCalendario {
+.calendario .listaCalendario .itemListaCalendario, .calendario .listaCalendario .today {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,12 +293,12 @@ a, a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
 }
-.calendario .listaCalendario .itemListaCalendario time {
+.calendario .listaCalendario .itemListaCalendario time, .calendario .listaCalendario .today time {
   font-size: 1.3rem;
   margin: 0 0 1rem 0;
   font-weight: 400;
 }
-.calendario .listaCalendario .itemListaCalendario:hover {
+.calendario .listaCalendario .itemListaCalendario:hover, .calendario .listaCalendario .today:hover {
   transform: scale(1.05);
 }
 .calendario .listaCalendario .today {
@@ -310,25 +324,136 @@ a, a:hover {
   .listaCalendario {
     grid-template-columns: 1fr 1fr;
   }
-  .itemListaCalendario {
+  .itemListaCalendario, .calendario .listaCalendario .today {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 300;
     font-size: 0.7rem;
+    box-sizing: border-box;
+    background: #231E39;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
   }
-  .itemListaCalendario time {
+  .itemListaCalendario time, .calendario .listaCalendario .today time {
     font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+    font-weight: 400;
   }
 }
 @media (max-width: 576px) {
   .listaCalendario {
     grid-template-columns: 1fr;
   }
-  .itemListaCalendario {
+  .itemListaCalendario, .calendario .listaCalendario .today {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 0.75rem;
+    font-weight: 300;
     font-size: 0.8rem;
+    box-sizing: border-box;
+    background: #231E39;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
   }
-  .itemListaCalendario time {
+  .itemListaCalendario time, .calendario .listaCalendario .today time {
     font-size: 2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 400;
   }
 }
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Escondido por defecto */
+  background-color: #020202;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#back-to-top:hover {
+  background-color: #231E39;
+}
+
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: #007bff;
+  padding-right: 40px;
+  color: #fff;
+}
+
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+
+.btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
 /*GENERALES*/
 * {
   font-family: "DM Sans";
@@ -367,9 +492,10 @@ body footer {
 
 /*CARD: Colores y estilos de las tarjetas en todas las secciones*/
 .card {
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .card .card-body {
   background-color: #231E39;
@@ -386,53 +512,55 @@ body footer {
   color: white;
 }
 .card .card-img-top {
-  width: 100%;
-  height: 60vh;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+}
+.card h3 {
+  font-weight: 700;
+}
+.card .card {
+  transition: transform 0.2s;
+}
+.card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card .card-text {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.card .card-link {
+  text-decoration: underline;
 }
 
 .card:hover {
   transform: scale(1.05);
 }
 
-/*Seccion POPULAR*/
-.popular-section h3 {
-  font-weight: 700;
-}
-.popular-section .card {
-  transition: transform 0.2s;
-}
-.popular-section .card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.popular-section .card-text {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 /*Cambios en el FOOTER*/
 footer {
-  background: linear-gradient(to right, #020202, 40%, #0d324d);
-  color: #0d324d !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0;
-  padding-bottom: 0;
+  background-color: #020202;
+  color: #0d324d;
 }
 footer a.nav-link {
   color: white;
   font: bolder;
 }
+footer a.nav-link:hover {
+  color: #231E39;
+}
 
 /*Cambios en las IMAGENES*/
+.img-brand {
+  height: 13vh;
+}
+
 .appstore {
-  width: 20%;
-  margin-left: 40%;
-  max-width: 90%;
+  width: 40%;
+  max-width: 70%;
   height: auto;
-  display: block;
-  margin-bottom: 10px;
 }
 
 .avatar {
@@ -502,7 +630,7 @@ footer a.nav-link {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #0d324d;
 }
 
 @media (max-width: 500px) {
