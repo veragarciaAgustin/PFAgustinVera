@@ -257,123 +257,96 @@ a, a:hover {
   }
 }
 /*SECCION CALENDARIO eventos.html*/
-.calendario {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  font-family: "DM Sans";
-}
-.calendario .tituloCalendario {
-  font-weight: 800;
-  margin: 1rem 0 0;
-  color: #fff;
-}
-.calendario .listaCalendario {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-}
-.calendario .listaCalendario .itemListaCalendario, .calendario .listaCalendario .today {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  font-weight: 300;
-  font-size: 0.8rem;
-  box-sizing: border-box;
-  background: #231E39;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.calendario h2 {
+  font-size: 50px;
   text-align: center;
-}
-.calendario .listaCalendario .itemListaCalendario time, .calendario .listaCalendario .today time {
-  font-size: 1.3rem;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
-}
-.calendario .listaCalendario .itemListaCalendario:hover, .calendario .listaCalendario .today:hover {
-  transform: scale(1.05);
-}
-.calendario .listaCalendario .today {
-  background: #007bff;
-}
-.calendario .listaCalendario .today time {
-  font-weight: 500;
-  font-size: 2rem;
+  margin-bottom: 50px;
 }
 
-/*Media Queries Calendario*/
-@media (max-width: 1200px) {
-  .listaCalendario {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+.event-container {
+  font-family: "DM Sans";
+  max-width: 800px;
+  margin: 0 auto;
 }
-@media (max-width: 992px) {
-  .listaCalendario {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.event-container h3.month {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
 }
-@media (max-width: 768px) {
-  .listaCalendario {
-    grid-template-columns: 1fr 1fr;
-  }
-  .itemListaCalendario, .calendario .listaCalendario .today {
-    display: flex;
+.event-container .event {
+  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  border-radius: 8px;
+  margin: 32px 0;
+}
+
+.event .event-left {
+  background: #020202;
+  min-width: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 8px 48px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px 0 0 8px;
+}
+
+.event .event-left .date {
+  font-size: 56px;
+}
+
+.event .event-left .month {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.event .event-right {
+  background-color: #231E39;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.event .event-right h3.event-title {
+  font-size: 24px;
+  margin: 24px 0 10px 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.tag__item {
+  display: inline-block;
+  background: #0d324d;
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+.tag__item:hover {
+  background: #007bff;
+}
+
+@media (max-width: 550px) {
+  .event {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
-    font-weight: 300;
-    font-size: 0.7rem;
-    box-sizing: border-box;
-    background: #231E39;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    text-align: center;
   }
-  .itemListaCalendario time, .calendario .listaCalendario .today time {
-    font-size: 1.8rem;
-    margin: 0 0 1rem 0;
-    font-weight: 400;
+  .event .event-left {
+    padding: 0;
+    border-radius: 8px 8px 0 0;
   }
-}
-@media (max-width: 576px) {
-  .listaCalendario {
-    grid-template-columns: 1fr;
+  .event .event-left .event-date .date,
+  .event .event-left .event-date .month {
+    display: inline-block;
+    font-size: 24px;
   }
-  .itemListaCalendario, .calendario .listaCalendario .today {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0.75rem;
-    font-weight: 300;
-    font-size: 0.8rem;
-    box-sizing: border-box;
-    background: #231E39;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    text-align: center;
-  }
-  .itemListaCalendario time, .calendario .listaCalendario .today time {
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
-    font-weight: 400;
+  .event .event-left .event-date {
+    padding: 10px 0;
   }
 }
 #back-to-top {
